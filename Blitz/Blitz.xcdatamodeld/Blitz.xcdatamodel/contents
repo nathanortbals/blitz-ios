@@ -1,4 +1,18 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="1" systemVersion="11A491" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
-    <elements/>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="14460.32" systemVersion="18A391" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="LineupCache" representedClassName=".LineupCache" syncable="YES">
+        <attribute name="d" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="date" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="f" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="qb" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="rb1" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="rb2" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="te" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="wr1" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="wr2" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="wr3" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="LineupCache" positionX="-63" positionY="-18" width="128" height="195"/>
+    </elements>
 </model>

@@ -13,6 +13,14 @@
 		44391F4A225E6B0200CFBEDE /* Blitz.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 44391F48225E6B0200CFBEDE /* Blitz.xcdatamodeld */; };
 		44391F4C225E6B0200CFBEDE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 44391F4B225E6B0200CFBEDE /* Assets.xcassets */; };
 		44391F4F225E6B0200CFBEDE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 44391F4D225E6B0200CFBEDE /* LaunchScreen.storyboard */; };
+		44391F5C225E70D100CFBEDE /* ApiManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44391F5B225E70D100CFBEDE /* ApiManager.swift */; };
+		44391F5E225E712C00CFBEDE /* Lineup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44391F5D225E712C00CFBEDE /* Lineup.swift */; };
+		44391F60225E716B00CFBEDE /* DfsEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44391F5F225E716B00CFBEDE /* DfsEntry.swift */; };
+		44391F62225E718100CFBEDE /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44391F61225E718100CFBEDE /* Player.swift */; };
+		44391F64225E719C00CFBEDE /* Team.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44391F63225E719C00CFBEDE /* Team.swift */; };
+		44391F66225E71B000CFBEDE /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44391F65225E71B000CFBEDE /* Game.swift */; };
+		44391F69225E736D00CFBEDE /* LineupCache+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44391F67225E736D00CFBEDE /* LineupCache+CoreDataClass.swift */; };
+		44391F6A225E736D00CFBEDE /* LineupCache+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44391F68225E736D00CFBEDE /* LineupCache+CoreDataProperties.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +32,14 @@
 		44391F4B225E6B0200CFBEDE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		44391F4E225E6B0200CFBEDE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		44391F50225E6B0200CFBEDE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		44391F5B225E70D100CFBEDE /* ApiManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiManager.swift; sourceTree = "<group>"; };
+		44391F5D225E712C00CFBEDE /* Lineup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lineup.swift; sourceTree = "<group>"; };
+		44391F5F225E716B00CFBEDE /* DfsEntry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DfsEntry.swift; sourceTree = "<group>"; };
+		44391F61225E718100CFBEDE /* Player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
+		44391F63225E719C00CFBEDE /* Team.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Team.swift; sourceTree = "<group>"; };
+		44391F65225E71B000CFBEDE /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
+		44391F67225E736D00CFBEDE /* LineupCache+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LineupCache+CoreDataClass.swift"; sourceTree = "<group>"; };
+		44391F68225E736D00CFBEDE /* LineupCache+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LineupCache+CoreDataProperties.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +72,7 @@
 		44391F40225E6B0200CFBEDE /* Blitz */ = {
 			isa = PBXGroup;
 			children = (
+				44391F56225E6D2200CFBEDE /* Data */,
 				44391F41225E6B0200CFBEDE /* AppDelegate.swift */,
 				44391F43225E6B0200CFBEDE /* ViewController.swift */,
 				44391F45225E6B0200CFBEDE /* Main.storyboard */,
@@ -65,6 +82,21 @@
 				44391F48225E6B0200CFBEDE /* Blitz.xcdatamodeld */,
 			);
 			path = Blitz;
+			sourceTree = "<group>";
+		};
+		44391F56225E6D2200CFBEDE /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				44391F67225E736D00CFBEDE /* LineupCache+CoreDataClass.swift */,
+				44391F68225E736D00CFBEDE /* LineupCache+CoreDataProperties.swift */,
+				44391F5B225E70D100CFBEDE /* ApiManager.swift */,
+				44391F5D225E712C00CFBEDE /* Lineup.swift */,
+				44391F5F225E716B00CFBEDE /* DfsEntry.swift */,
+				44391F61225E718100CFBEDE /* Player.swift */,
+				44391F63225E719C00CFBEDE /* Team.swift */,
+				44391F65225E71B000CFBEDE /* Game.swift */,
+			);
+			path = Data;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,9 +170,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				44391F60225E716B00CFBEDE /* DfsEntry.swift in Sources */,
+				44391F69225E736D00CFBEDE /* LineupCache+CoreDataClass.swift in Sources */,
 				44391F4A225E6B0200CFBEDE /* Blitz.xcdatamodeld in Sources */,
 				44391F44225E6B0200CFBEDE /* ViewController.swift in Sources */,
 				44391F42225E6B0200CFBEDE /* AppDelegate.swift in Sources */,
+				44391F5C225E70D100CFBEDE /* ApiManager.swift in Sources */,
+				44391F6A225E736D00CFBEDE /* LineupCache+CoreDataProperties.swift in Sources */,
+				44391F66225E71B000CFBEDE /* Game.swift in Sources */,
+				44391F62225E718100CFBEDE /* Player.swift in Sources */,
+				44391F64225E719C00CFBEDE /* Team.swift in Sources */,
+				44391F5E225E712C00CFBEDE /* Lineup.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
