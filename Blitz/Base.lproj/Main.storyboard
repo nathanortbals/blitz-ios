@@ -13,7 +13,6 @@
         <!--MY LINE UP-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
                 <viewController id="BYZ-38-t0r" customClass="MyLineupViewController" customModule="Blitz" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
@@ -97,13 +96,14 @@
                         <outlet property="myLineupTableView" destination="Fa7-tO-KWd" id="B5Z-O0-beq"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1134.7826086956522" y="782.8125"/>
         </scene>
         <!--QB-->
         <scene sceneID="tuH-oK-hES">
             <objects>
-                <viewController id="73P-eb-jMe" sceneMemberID="viewController">
+                <viewController id="73P-eb-jMe" customClass="allPlayersViewController" customModule="Blitz" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="j9X-ib-uhr">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -112,7 +112,7 @@
                                 <rect key="frame" x="0.0" y="44" width="414" height="818"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="79" id="vB8-g9-Pvg">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="playerCell" rowHeight="79" id="vB8-g9-Pvg" customClass="allPlayersTableViewCell" customModule="Blitz" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="414" height="79"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="vB8-g9-Pvg" id="3A8-t7-6h0">
@@ -162,6 +162,10 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
+                                            <outlet property="matchup" destination="7gF-YS-QuW" id="1SL-52-M4n"/>
+                                            <outlet property="playerName" destination="NFv-X9-dFU" id="2lD-ql-5n9"/>
+                                            <outlet property="playerSalary" destination="btv-Sg-oIk" id="UdN-1a-uJ1"/>
+                                            <outlet property="pos" destination="bgO-bm-ebo" id="Hex-yS-F7j"/>
                                             <segue destination="1zj-1D-P6D" kind="show" id="yT0-MH-ozd"/>
                                         </connections>
                                     </tableViewCell>
@@ -178,6 +182,9 @@
                         <viewLayoutGuide key="safeArea" id="nm9-NX-fcx"/>
                     </view>
                     <navigationItem key="navigationItem" title="QB" id="e3Q-sb-NwF"/>
+                    <connections>
+                        <outlet property="allPlayerTableView" destination="GFP-XU-Evh" id="FcJ-lh-J8u"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jeF-FG-FL7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

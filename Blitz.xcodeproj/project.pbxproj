@@ -23,6 +23,8 @@
 		44391F6A225E736D00CFBEDE /* LineupCache+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44391F68225E736D00CFBEDE /* LineupCache+CoreDataProperties.swift */; };
 		E61E64AF225FAD0700C6C0A2 /* MyLineupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E61E64AE225FAD0700C6C0A2 /* MyLineupViewController.swift */; };
 		E61E64B1225FAD1600C6C0A2 /* MyLinupTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E61E64B0225FAD1600C6C0A2 /* MyLinupTableViewCell.swift */; };
+		E61E64B3225FADE100C6C0A2 /* allPlayersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E61E64B2225FADE100C6C0A2 /* allPlayersViewController.swift */; };
+		E61E64B5225FAE1A00C6C0A2 /* allPlayersTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E61E64B4225FAE1A00C6C0A2 /* allPlayersTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +46,8 @@
 		44391F68225E736D00CFBEDE /* LineupCache+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LineupCache+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		E61E64AE225FAD0700C6C0A2 /* MyLineupViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyLineupViewController.swift; sourceTree = "<group>"; };
 		E61E64B0225FAD1600C6C0A2 /* MyLinupTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyLinupTableViewCell.swift; sourceTree = "<group>"; };
+		E61E64B2225FADE100C6C0A2 /* allPlayersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = allPlayersViewController.swift; sourceTree = "<group>"; };
+		E61E64B4225FAE1A00C6C0A2 /* allPlayersTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = allPlayersTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +90,8 @@
 				44391F4D225E6B0200CFBEDE /* LaunchScreen.storyboard */,
 				44391F50225E6B0200CFBEDE /* Info.plist */,
 				44391F48225E6B0200CFBEDE /* Blitz.xcdatamodeld */,
+				E61E64B2225FADE100C6C0A2 /* allPlayersViewController.swift */,
+				E61E64B4225FAE1A00C6C0A2 /* allPlayersTableViewCell.swift */,
 			);
 			path = Blitz;
 			sourceTree = "<group>";
@@ -177,6 +183,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				44391F60225E716B00CFBEDE /* DfsEntry.swift in Sources */,
+				E61E64B5225FAE1A00C6C0A2 /* allPlayersTableViewCell.swift in Sources */,
+				E61E64B3225FADE100C6C0A2 /* allPlayersViewController.swift in Sources */,
 				44391F69225E736D00CFBEDE /* LineupCache+CoreDataClass.swift in Sources */,
 				44391F4A225E6B0200CFBEDE /* Blitz.xcdatamodeld in Sources */,
 				44391F44225E6B0200CFBEDE /* ViewController.swift in Sources */,
