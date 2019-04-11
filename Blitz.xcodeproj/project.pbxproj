@@ -45,7 +45,7 @@
 		44391F65225E71B000CFBEDE /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
 		44391F67225E736D00CFBEDE /* LineupCache+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LineupCache+CoreDataClass.swift"; sourceTree = "<group>"; };
 		44391F68225E736D00CFBEDE /* LineupCache+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LineupCache+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		6DD29AAD225FC12500C0D5FB /* detailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = detailViewController.swift; sourceTree = "<group>"; };
+		6DD29AAD225FC12500C0D5FB /* detailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = detailViewController.swift; path = Data/detailViewController.swift; sourceTree = "<group>"; };
 		E61E64AE225FAD0700C6C0A2 /* MyLineupViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyLineupViewController.swift; sourceTree = "<group>"; };
 		E61E64B0225FAD1600C6C0A2 /* MyLinupTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyLinupTableViewCell.swift; sourceTree = "<group>"; };
 		E61E64B2225FADE100C6C0A2 /* allPlayersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = allPlayersViewController.swift; sourceTree = "<group>"; };
@@ -66,7 +66,6 @@
 		44391F35225E6B0200CFBEDE = {
 			isa = PBXGroup;
 			children = (
-				6DD29AAD225FC12500C0D5FB /* detailViewController.swift */,
 				44391F40225E6B0200CFBEDE /* Blitz */,
 				44391F3F225E6B0200CFBEDE /* Products */,
 			);
@@ -86,6 +85,7 @@
 				44391F56225E6D2200CFBEDE /* Data */,
 				44391F41225E6B0200CFBEDE /* AppDelegate.swift */,
 				E61E64AE225FAD0700C6C0A2 /* MyLineupViewController.swift */,
+				6DD29AAD225FC12500C0D5FB /* detailViewController.swift */,
 				44391F43225E6B0200CFBEDE /* ViewController.swift */,
 				E61E64B0225FAD1600C6C0A2 /* MyLinupTableViewCell.swift */,
 				44391F45225E6B0200CFBEDE /* Main.storyboard */,
