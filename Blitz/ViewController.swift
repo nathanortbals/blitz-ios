@@ -12,7 +12,8 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+
+        }
 //        let apiManager: ApiManager? = ApiManager()
 //
 //        if let apiManager = apiManager {
@@ -32,4 +33,3 @@ class ViewController: UIViewController {
 
 
 }
-

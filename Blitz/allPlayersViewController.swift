@@ -36,21 +36,6 @@ class allPlayersViewController: UIViewController, UITableViewDataSource, UITable
         allPlayerTableView.dataSource = self
         
         
-        let apiManager: ApiManager? = ApiManager()
-        
-        if let apiManager = apiManager {
-            apiManager.getLineup(){ (result) in
-                switch(result) {
-                case .success(let lineup):
-                    print(lineup)
-                case .error(let error):
-                    print(error)
-                }
-            }
-        }
-        else {
-            print("Could not initialize apiManager")
-        }
         // Do any additional setup after loading the view.
     }
     
