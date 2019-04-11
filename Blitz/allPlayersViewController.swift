@@ -9,6 +9,8 @@
 import UIKit
 
 class allPlayersViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+    var positon:String?
+    
     @IBOutlet weak var allPlayerTableView: UITableView!
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 1
@@ -32,6 +34,23 @@ class allPlayersViewController: UIViewController, UITableViewDataSource, UITable
         super.viewDidLoad()
         allPlayerTableView.delegate = self
         allPlayerTableView.dataSource = self
+        
+        
+        let apiManager: ApiManager? = ApiManager()
+        
+        if let apiManager = apiManager {
+            apiManager.getLineup(){ (result) in
+                switch(result) {
+                case .success(let lineup):
+                    print(lineup)
+                case .error(let error):
+                    print(error)
+                }
+            }
+        }
+        else {
+            print("Could not initialize apiManager")
+        }
         // Do any additional setup after loading the view.
     }
     

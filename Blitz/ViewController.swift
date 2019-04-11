@@ -13,22 +13,22 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let apiManager: ApiManager? = ApiManager()
-        
-        if let apiManager = apiManager {
-            apiManager.getLineup(){ (result) in
-                switch(result) {
-                case .success(let lineup):
-                    print(lineup)
-                case .error(let error):
-                    print(error)
-                }
-            }
-        }
-        else {
-            print("Could not initialize apiManager")
-        }
-    }
+//        let apiManager: ApiManager? = ApiManager()
+//
+//        if let apiManager = apiManager {
+//            apiManager.getLineup(){ (result) in
+//                switch(result) {
+//                case .success(let lineup):
+//                    print(lineup)
+//                case .error(let error):
+//                    print(error)
+//                }
+//            }
+//        }
+//        else {
+//            print("Could not initialize apiManager")
+//        }
+//    }
 
 
 }

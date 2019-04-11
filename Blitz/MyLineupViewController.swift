@@ -9,9 +9,11 @@
 import UIKit
 
 class MyLineupViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+    
+    var position:[String] = ["QB", "RB1", "RB2", "WR1", "WR2", "WR3", "TE", "FLEX", "D"]
     @IBOutlet weak var myLineupTableView: UITableView!
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
+        return position.count
     }
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
@@ -19,7 +21,7 @@ class MyLineupViewController: UIViewController, UITableViewDelegate, UITableView
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "playerCell", for: indexPath) as! MyLinupTableViewCell
         
-        cell.pos.text = "QB"
+        cell.pos.text = position[indexPath.row]
         cell.playerName.text = "Tom Brady"
         cell.playerSalary.text = "14000000000"
         return cell
@@ -33,7 +35,13 @@ class MyLineupViewController: UIViewController, UITableViewDelegate, UITableView
         // Do any additional setup after loading the view.
     }
     
-
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let destination = segue.destination as? allPlayersViewController,
+            let row = tableview.indexPathForSelectedRow?.row {
+            destination.positon = position[row]
+        }
+        
+    }
     /*
     // MARK: - Navigation
 
