@@ -21,6 +21,8 @@
 		44391F66225E71B000CFBEDE /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44391F65225E71B000CFBEDE /* Game.swift */; };
 		44391F69225E736D00CFBEDE /* LineupCache+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44391F67225E736D00CFBEDE /* LineupCache+CoreDataClass.swift */; };
 		44391F6A225E736D00CFBEDE /* LineupCache+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44391F68225E736D00CFBEDE /* LineupCache+CoreDataProperties.swift */; };
+		E61E64AF225FAD0700C6C0A2 /* MyLineupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E61E64AE225FAD0700C6C0A2 /* MyLineupViewController.swift */; };
+		E61E64B1225FAD1600C6C0A2 /* MyLinupTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E61E64B0225FAD1600C6C0A2 /* MyLinupTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +42,8 @@
 		44391F65225E71B000CFBEDE /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
 		44391F67225E736D00CFBEDE /* LineupCache+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LineupCache+CoreDataClass.swift"; sourceTree = "<group>"; };
 		44391F68225E736D00CFBEDE /* LineupCache+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LineupCache+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		E61E64AE225FAD0700C6C0A2 /* MyLineupViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyLineupViewController.swift; sourceTree = "<group>"; };
+		E61E64B0225FAD1600C6C0A2 /* MyLinupTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyLinupTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,7 +78,9 @@
 			children = (
 				44391F56225E6D2200CFBEDE /* Data */,
 				44391F41225E6B0200CFBEDE /* AppDelegate.swift */,
+				E61E64AE225FAD0700C6C0A2 /* MyLineupViewController.swift */,
 				44391F43225E6B0200CFBEDE /* ViewController.swift */,
+				E61E64B0225FAD1600C6C0A2 /* MyLinupTableViewCell.swift */,
 				44391F45225E6B0200CFBEDE /* Main.storyboard */,
 				44391F4B225E6B0200CFBEDE /* Assets.xcassets */,
 				44391F4D225E6B0200CFBEDE /* LaunchScreen.storyboard */,
@@ -179,6 +185,8 @@
 				44391F6A225E736D00CFBEDE /* LineupCache+CoreDataProperties.swift in Sources */,
 				44391F66225E71B000CFBEDE /* Game.swift in Sources */,
 				44391F62225E718100CFBEDE /* Player.swift in Sources */,
+				E61E64AF225FAD0700C6C0A2 /* MyLineupViewController.swift in Sources */,
+				E61E64B1225FAD1600C6C0A2 /* MyLinupTableViewCell.swift in Sources */,
 				44391F64225E719C00CFBEDE /* Team.swift in Sources */,
 				44391F5E225E712C00CFBEDE /* Lineup.swift in Sources */,
 			);
