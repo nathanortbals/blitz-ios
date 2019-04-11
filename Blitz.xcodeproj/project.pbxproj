@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		23392E3A225FA7620073DA0A /* Data in Resources */ = {isa = PBXBuildFile; fileRef = 23392E39225FA7620073DA0A /* Data */; };
 		23392E3C225FA76B0073DA0A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23392E3B225FA76B0073DA0A /* ViewController.swift */; };
-		23392E3F225FA78F0073DA0A /* Blitz.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 23392E3D225FA78F0073DA0A /* Blitz.xcdatamodeld */; };
+		23392E43225FA8820073DA0A /* Blitz.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 23392E41225FA8820073DA0A /* Blitz.xcdatamodeld */; };
 		44391F42225E6B0200CFBEDE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44391F41225E6B0200CFBEDE /* AppDelegate.swift */; };
 		44391F47225E6B0200CFBEDE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 44391F45225E6B0200CFBEDE /* Main.storyboard */; };
 		44391F4C225E6B0200CFBEDE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 44391F4B225E6B0200CFBEDE /* Assets.xcassets */; };
@@ -23,7 +23,7 @@
 /* Begin PBXFileReference section */
 		23392E39225FA7620073DA0A /* Data */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Data; sourceTree = "<group>"; };
 		23392E3B225FA76B0073DA0A /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		23392E3E225FA78F0073DA0A /* Blitz.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Blitz.xcdatamodel; sourceTree = "<group>"; };
+		23392E42225FA8820073DA0A /* Blitz.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Blitz.xcdatamodel; sourceTree = "<group>"; };
 		44391F3E225E6B0200CFBEDE /* Blitz.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Blitz.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		44391F41225E6B0200CFBEDE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		44391F46225E6B0200CFBEDE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -72,7 +72,7 @@
 				44391F4B225E6B0200CFBEDE /* Assets.xcassets */,
 				44391F4D225E6B0200CFBEDE /* LaunchScreen.storyboard */,
 				44391F50225E6B0200CFBEDE /* Info.plist */,
-				23392E3D225FA78F0073DA0A /* Blitz.xcdatamodeld */,
+				23392E41225FA8820073DA0A /* Blitz.xcdatamodeld */,
 				23392E3B225FA76B0073DA0A /* ViewController.swift */,
 				E61E64A4225E7AF900C6C0A2 /* MyLinupTableViewCell.swift */,
 				E61E64A6225E7B5E00C6C0A2 /* MyLineupViewController.swift */,
@@ -159,9 +159,9 @@
 				E61E64A9225E7FD300C6C0A2 /* allPlayersViewController.swift in Sources */,
 				E61E64A5225E7AF900C6C0A2 /* MyLinupTableViewCell.swift in Sources */,
 				23392E3C225FA76B0073DA0A /* ViewController.swift in Sources */,
+				23392E43225FA8820073DA0A /* Blitz.xcdatamodeld in Sources */,
 				E61E64AB225E803400C6C0A2 /* allPlayersTableViewCell.swift in Sources */,
 				44391F42225E6B0200CFBEDE /* AppDelegate.swift in Sources */,
-				23392E3F225FA78F0073DA0A /* Blitz.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -361,12 +361,12 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		23392E3D225FA78F0073DA0A /* Blitz.xcdatamodeld */ = {
+		23392E41225FA8820073DA0A /* Blitz.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				23392E3E225FA78F0073DA0A /* Blitz.xcdatamodel */,
+				23392E42225FA8820073DA0A /* Blitz.xcdatamodel */,
 			);
-			currentVersion = 23392E3E225FA78F0073DA0A /* Blitz.xcdatamodel */;
+			currentVersion = 23392E42225FA8820073DA0A /* Blitz.xcdatamodel */;
 			name = Blitz.xcdatamodeld;
 			path = "../../../Downloads/blitz-ios-master/Blitz/Blitz.xcdatamodeld";
 			sourceTree = "<group>";
