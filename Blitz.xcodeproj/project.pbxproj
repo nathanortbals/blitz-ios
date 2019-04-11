@@ -16,8 +16,6 @@
 		44391F4F225E6B0200CFBEDE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 44391F4D225E6B0200CFBEDE /* LaunchScreen.storyboard */; };
 		E61E64A5225E7AF900C6C0A2 /* MyLinupTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E61E64A4225E7AF900C6C0A2 /* MyLinupTableViewCell.swift */; };
 		E61E64A7225E7B5E00C6C0A2 /* MyLineupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E61E64A6225E7B5E00C6C0A2 /* MyLineupViewController.swift */; };
-		E61E64A9225E7FD300C6C0A2 /* allPlayersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E61E64A8225E7FD300C6C0A2 /* allPlayersViewController.swift */; };
-		E61E64AB225E803400C6C0A2 /* allPlayersTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E61E64AA225E803400C6C0A2 /* allPlayersTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,8 +30,6 @@
 		44391F50225E6B0200CFBEDE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E61E64A4225E7AF900C6C0A2 /* MyLinupTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyLinupTableViewCell.swift; sourceTree = "<group>"; };
 		E61E64A6225E7B5E00C6C0A2 /* MyLineupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyLineupViewController.swift; sourceTree = "<group>"; };
-		E61E64A8225E7FD300C6C0A2 /* allPlayersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = allPlayersViewController.swift; sourceTree = "<group>"; };
-		E61E64AA225E803400C6C0A2 /* allPlayersTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = allPlayersTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,8 +72,6 @@
 				23392E3B225FA76B0073DA0A /* ViewController.swift */,
 				E61E64A4225E7AF900C6C0A2 /* MyLinupTableViewCell.swift */,
 				E61E64A6225E7B5E00C6C0A2 /* MyLineupViewController.swift */,
-				E61E64A8225E7FD300C6C0A2 /* allPlayersViewController.swift */,
-				E61E64AA225E803400C6C0A2 /* allPlayersTableViewCell.swift */,
 			);
 			path = Blitz;
 			sourceTree = "<group>";
@@ -156,11 +150,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				E61E64A7225E7B5E00C6C0A2 /* MyLineupViewController.swift in Sources */,
-				E61E64A9225E7FD300C6C0A2 /* allPlayersViewController.swift in Sources */,
 				E61E64A5225E7AF900C6C0A2 /* MyLinupTableViewCell.swift in Sources */,
+<<<<<<< HEAD
 				23392E3C225FA76B0073DA0A /* ViewController.swift in Sources */,
 				23392E43225FA8820073DA0A /* Blitz.xcdatamodeld in Sources */,
 				E61E64AB225E803400C6C0A2 /* allPlayersTableViewCell.swift in Sources */,
+=======
+>>>>>>> parent of 11d18d5... more work on UI
 				44391F42225E6B0200CFBEDE /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
