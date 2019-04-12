@@ -29,11 +29,8 @@ class MyLineupViewController: UIViewController, UITableViewDelegate, UITableView
             cell.pos.text = lineup?.getDfsEntryFromIndex(index: indexPath.row)?.position?.getPositionName() ?? " "
             cell.playerName.text = "\(lineup?.getDfsEntryFromIndex(index: indexPath.row)?.player?.firstName ?? " ") \(lineup?.getDfsEntryFromIndex(index: indexPath.row)?.player?.lastName ?? " ")"
         } else {
-            let fd:[String] = ["f","d"]
-            for pos in fd{
-                cell.pos.text = pos
-                cell.playerName.text = lineup?.getDfsEntryFromIndex(index: indexPath.row)?.team?.abbreviation ?? " "
-            }
+                cell.pos.text = lineup?.getDfsEntryFromIndex(index: indexPath.row)?.position?.getPositionName() ?? ""
+//                cell.playerName.text = lineup?.getDfsEntryFromIndex(index: indexPath.row)?.team?.abbreviation ?? " "
         }
         cell.playerSalary.text = "\(lineup?.getDfsEntryFromIndex(index: indexPath.row)?.salary ?? 0)"
         
