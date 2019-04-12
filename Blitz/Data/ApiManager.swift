@@ -100,8 +100,8 @@ class ApiManager {
                 do {
                     let lineup = try self.decoder.decode(Lineup.self, from: data)
                     completion(.success(lineup))
-                } catch {
-                    completion(.error("Could not decode response"))
+                } catch let error {
+                    completion(.error("Could not decode response. Error: " + error.localizedDescription))
                 }
             case .error(let error):
                 completion(.error(error))
@@ -109,5 +109,22 @@ class ApiManager {
         })
     }
     
-    
+    func getDfsEntries(position: Position, completion: @escaping ((Result<[DfsEntry]>) -> Void)) {
+        var queryItems: [URLQueryItem] = []
+        queryItems.append(URLQueryItem(name: "position", value: position.rawValue))
+        
+        makeRequest(path: "/dfs", queryItems: queryItems, completion: { (result) in
+            switch(result) {
+            case .success(let data):
+                do {
+                    let dfsEntries = try self.decoder.decode([DfsEntry].self, from: data)
+                    completion(.success(dfsEntries))
+                } catch let error {
+                    completion(.error("Could not decode response. Error: " + error.localizedDescription))
+                }
+            case .error(let error):
+                completion(.error(error))
+            }
+        })
+    }
 }

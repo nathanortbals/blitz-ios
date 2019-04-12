@@ -15,4 +15,5 @@ struct DfsEntry: Codable {
     let dfsSourceId: Int?
     let salary: Int?
     let fantasyPoints: Float?
+    let position: Position?
 }

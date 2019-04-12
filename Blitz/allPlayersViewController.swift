@@ -9,15 +9,18 @@
 import UIKit
 
 class allPlayersViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
-    var positon:String?
+    var apiManager: ApiManager?
+    var position: Position? = .QB
     
     @IBOutlet weak var allPlayerTableView: UITableView!
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 1
     }
+    
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "playerCell", for: indexPath) as! allPlayersTableViewCell
         
