@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="UpE-WW-qlw">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="UpE-WW-qlw">
     <device id="retina6_1" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -22,11 +22,11 @@
                                 <rect key="frame" x="0.0" y="44" width="414" height="818"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="playerCell" rowHeight="150" id="NZL-it-t62" customClass="MyLinupTableViewCell" customModule="Blitz" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="playerCell" rowHeight="150" id="NZL-it-t62" customClass="MyLinupTableViewCell" customModule="Blitz" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="414" height="150"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="NZL-it-t62" id="d0q-kG-dKz">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="149.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="376" height="149.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="QB" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K1T-a9-gtA">
@@ -35,35 +35,25 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RPZ-r9-hzQ">
-                                                    <rect key="frame" x="364" y="51.5" width="30" height="46.5"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="28"/>
-                                                    <state key="normal" title="+"/>
-                                                    <connections>
-                                                        <segue destination="73P-eb-jMe" kind="show" id="kUQ-Bv-RuD"/>
-                                                    </connections>
-                                                </button>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4WC-SS-bFc">
-                                                    <rect key="frame" x="125" y="46" width="45" height="21"/>
+                                                    <rect key="frame" x="87" y="46" width="45" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Salary" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U3C-Ug-INh">
-                                                    <rect key="frame" x="125" y="85" width="48" height="21"/>
+                                                    <rect key="frame" x="87" y="85" width="48" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="RPZ-r9-hzQ" firstAttribute="centerY" secondItem="d0q-kG-dKz" secondAttribute="centerY" id="2wp-wD-h9z"/>
-                                                <constraint firstAttribute="bottom" secondItem="RPZ-r9-hzQ" secondAttribute="bottom" constant="51.5" id="HED-Aw-ER6"/>
+                                                <constraint firstItem="U3C-Ug-INh" firstAttribute="top" secondItem="4WC-SS-bFc" secondAttribute="bottom" constant="18" id="Ex8-vs-wyL"/>
                                                 <constraint firstAttribute="trailing" secondItem="U3C-Ug-INh" secondAttribute="trailing" constant="241" id="IIs-c5-VTI"/>
                                                 <constraint firstItem="4WC-SS-bFc" firstAttribute="top" secondItem="d0q-kG-dKz" secondAttribute="top" constant="46" id="JPS-s5-uMr"/>
                                                 <constraint firstItem="K1T-a9-gtA" firstAttribute="centerY" secondItem="d0q-kG-dKz" secondAttribute="centerY" id="Olt-02-k2X"/>
                                                 <constraint firstAttribute="bottom" secondItem="U3C-Ug-INh" secondAttribute="bottom" constant="43.5" id="Us7-du-etY"/>
-                                                <constraint firstAttribute="trailing" secondItem="RPZ-r9-hzQ" secondAttribute="trailing" constant="20" id="dAj-vW-6Xj"/>
                                                 <constraint firstAttribute="trailing" secondItem="4WC-SS-bFc" secondAttribute="trailing" constant="244" id="lkO-qH-672"/>
                                             </constraints>
                                         </tableViewCellContentView>
@@ -71,6 +61,7 @@
                                             <outlet property="playerName" destination="4WC-SS-bFc" id="ntU-BT-CCd"/>
                                             <outlet property="playerSalary" destination="U3C-Ug-INh" id="53r-wH-CEG"/>
                                             <outlet property="pos" destination="K1T-a9-gtA" id="PdF-5k-siq"/>
+                                            <segue destination="73P-eb-jMe" kind="show" id="VIZ-8W-h9J"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -147,6 +138,7 @@
                                                     <rect key="frame" x="363" y="24" width="32" height="30"/>
                                                     <state key="normal" title="ADD"/>
                                                     <connections>
+                                                        <action selector="addPlayerToLineup:" destination="73P-eb-jMe" eventType="touchUpInside" id="y0k-Yp-qrG"/>
                                                         <segue destination="BYZ-38-t0r" kind="show" id="qxf-lL-hpo"/>
                                                     </connections>
                                                 </button>

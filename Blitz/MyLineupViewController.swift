@@ -44,7 +44,6 @@ class MyLineupViewController: UIViewController, UITableViewDelegate, UITableView
                 switch(result) {
                 case .success(let lineup):
                     self.lineup = lineup
-                    print(lineup)
                     self.myLineupTableView.reloadData()
                 case .error(let error):
                     print(error)
