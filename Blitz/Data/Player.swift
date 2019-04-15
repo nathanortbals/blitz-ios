@@ -13,4 +13,12 @@ struct Player: Codable {
     let firstName: String?
     let lastName: String?
     let jerseyNumber: Int?
+    
+    func getFullName() -> String? {
+        if let firstName = firstName, let lastName = lastName {
+            return firstName + " " + lastName
+        }
+        
+        return nil
+    }
 }

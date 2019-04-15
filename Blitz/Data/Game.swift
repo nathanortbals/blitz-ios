@@ -14,4 +14,12 @@ struct Game: Codable {
     let startTime: String?
     let awayTeamAbbreviation: String?
     let homeTeamAbbreviation: String?
+    
+    func getGameText() -> String? {
+        if let homeTeam = homeTeamAbbreviation, let awayTeam = awayTeamAbbreviation {
+            return homeTeam + " v " + awayTeam
+        }
+        
+        return nil
+    }
 }
