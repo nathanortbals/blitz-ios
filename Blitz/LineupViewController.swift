@@ -9,37 +9,11 @@
 import UIKit
 
 class LineupViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+    
+    @IBOutlet weak var lineupTableView: UITableView!
+    
     var apiManager: ApiManager?
     var lineup: Lineup?
-    
-<<<<<<< HEAD:Blitz/LineupViewController.swift
-    @IBOutlet weak var lineupTableView: UITableView!
-=======
-    @IBOutlet weak var myLineupTableView: UITableView!
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        if lineup != nil{
-            return Lineup.lineupCount
-        }
-        return 0
-    }
-    func numberOfSections(in tableView: UITableView) -> Int {
-        return 1
-    }
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "playerCell", for: indexPath) as! MyLinupTableViewCell
-        
-        if(lineup?.getDfsEntryFromIndex(index: indexPath.row)?.player != nil){
-            cell.pos.text = lineup?.getDfsEntryFromIndex(index: indexPath.row)?.position?.getPositionName() ?? " "
-            cell.playerName.text = "\(lineup?.getDfsEntryFromIndex(index: indexPath.row)?.player?.firstName ?? " ") \(lineup?.getDfsEntryFromIndex(index: indexPath.row)?.player?.lastName ?? " ")"
-        } else {
-                cell.pos.text = lineup?.getDfsEntryFromIndex(index: indexPath.row)?.position?.getPositionName() ?? ""
-//                cell.playerName.text = lineup?.getDfsEntryFromIndex(index: indexPath.row)?.team?.abbreviation ?? " "
-        }
-        cell.playerSalary.text = "\(lineup?.getDfsEntryFromIndex(index: indexPath.row)?.salary ?? 0)"
-        
-        return cell
-    }
->>>>>>> master:Blitz/MyLineupViewController.swift
     
     override func viewWillAppear(_ animated: Bool) {
         apiManager = ApiManager()

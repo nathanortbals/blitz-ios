@@ -105,7 +105,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="Lineup" id="qGx-bI-PV8"/>
                     <connections>
-                        <outlet property="lineupTableView" destination="Fa7-tO-KWd" id="B5Z-O0-beq"/>
+                        <outlet property="lineupTableView" destination="Fa7-tO-KWd" id="CGe-qN-DIj"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
