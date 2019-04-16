@@ -29,7 +29,7 @@ class LinupTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
-    func setLabelsFromDfsEntry(dfsEntry: DfsEntry) {
+    func setLabelsFromDfsEntry(lineupPosition: Int, dfsEntry: DfsEntry) {
         if dfsEntry.position == .D {
             nameLabel.text = dfsEntry.team?.abbreviation
         }
@@ -37,7 +37,7 @@ class LinupTableViewCell: UITableViewCell {
             nameLabel.text = dfsEntry.player?.getFullName()
         }
         
-        positionLabel.text = dfsEntry.position?.getPositionName()
+        positionLabel.text = Lineup.getPositionNameFromIndex(index: lineupPosition)
         teamLabel.text = dfsEntry.team?.abbreviation
         gameLabel.text = dfsEntry.game?.getGameText()
         

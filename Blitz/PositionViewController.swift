@@ -13,11 +13,12 @@ class PositionViewController: UIViewController, UITableViewDataSource, UITableVi
     @IBOutlet weak var positionTableView: UITableView!
     
     var apiManager: ApiManager?
-    var position: Position?
+    var lineupPosition: Int?
     var dfsEntries: [DfsEntry] = []
     
     override func viewWillAppear(_ animated: Bool) {
-        if let apiManager = apiManager, let position = position {
+        if let apiManager = apiManager, let lineupPosition = lineupPosition, let position = Lineup.getPositionFromIndex(index: lineupPosition) {
+            self.title = Lineup.getPositionNameFromIndex(index: lineupPosition)
             apiManager.getDfsEntries(position: position){ (result) in
                 switch(result) {
                 case .success(let dfsEntries):
@@ -32,8 +33,6 @@ class PositionViewController: UIViewController, UITableViewDataSource, UITableVi
         else {
             print("Could not obtain ApiManager")
         }
-        
-        self.title = position?.getPositionName()
     }
     
     override func viewDidLoad() {
