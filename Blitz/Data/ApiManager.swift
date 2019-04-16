@@ -127,4 +127,39 @@ class ApiManager {
             }
         })
     }
+    
+    func getStats(dfsEntry: DfsEntry, completion: @escaping ((Result<Stats>) -> Void)) {
+        var path: String?
+        var id: Int?
+        if(dfsEntry.position == .D) {
+            path = "/teamStats"
+            id = dfsEntry.team?.id
+        }
+        else {
+            path = "/playerStats"
+            id = dfsEntry.player?.id
+        }
+        
+        if let path = path, let id = id {
+            var queryItems: [URLQueryItem] = []
+            queryItems.append(URLQueryItem(name: "id", value: String(id)))
+            
+            makeRequest(path: path, queryItems: queryItems, completion: { (result) in
+                switch(result) {
+                case .success(let data):
+                    do {
+                        let stats = try self.decoder.decode(Stats.self, from: data)
+                        completion(.success(stats))
+                    } catch let error {
+                        completion(.error("Could not decode response. Error: " + error.localizedDescription))
+                    }
+                case .error(let error):
+                    completion(.error(error))
+                }
+            })
+        }
+        else {
+            completion(.error("Could not obtain id"))
+        }
+    }
 }

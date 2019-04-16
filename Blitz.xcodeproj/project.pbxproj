@@ -22,6 +22,9 @@
 		44391F6A225E736D00CFBEDE /* LineupCache+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44391F68225E736D00CFBEDE /* LineupCache+CoreDataProperties.swift */; };
 		44544F64226529130099D8AA /* PlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44544F63226529130099D8AA /* PlayerViewController.swift */; };
 		44544F6622652AD40099D8AA /* StatsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44544F6522652AD40099D8AA /* StatsTableViewCell.swift */; };
+		44544F68226678380099D8AA /* Stats.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44544F67226678380099D8AA /* Stats.swift */; };
+		44544F6A2266786A0099D8AA /* StatsSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44544F692266786A0099D8AA /* StatsSection.swift */; };
+		44544F6C2266789A0099D8AA /* Stat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44544F6B2266789A0099D8AA /* Stat.swift */; };
 		445BEC1322600FCD002F4D33 /* Position.swift in Sources */ = {isa = PBXBuildFile; fileRef = 445BEC1222600FCD002F4D33 /* Position.swift */; };
 		E61E64AF225FAD0700C6C0A2 /* LineupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E61E64AE225FAD0700C6C0A2 /* LineupViewController.swift */; };
 		E61E64B1225FAD1600C6C0A2 /* LinupTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E61E64B0225FAD1600C6C0A2 /* LinupTableViewCell.swift */; };
@@ -47,6 +50,9 @@
 		44391F68225E736D00CFBEDE /* LineupCache+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LineupCache+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		44544F63226529130099D8AA /* PlayerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerViewController.swift; sourceTree = "<group>"; };
 		44544F6522652AD40099D8AA /* StatsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatsTableViewCell.swift; sourceTree = "<group>"; };
+		44544F67226678380099D8AA /* Stats.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stats.swift; sourceTree = "<group>"; };
+		44544F692266786A0099D8AA /* StatsSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatsSection.swift; sourceTree = "<group>"; };
+		44544F6B2266789A0099D8AA /* Stat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stat.swift; sourceTree = "<group>"; };
 		445BEC1222600FCD002F4D33 /* Position.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Position.swift; sourceTree = "<group>"; };
 		E61E64AE225FAD0700C6C0A2 /* LineupViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LineupViewController.swift; sourceTree = "<group>"; };
 		E61E64B0225FAD1600C6C0A2 /* LinupTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LinupTableViewCell.swift; sourceTree = "<group>"; };
@@ -113,6 +119,9 @@
 				44391F63225E719C00CFBEDE /* Team.swift */,
 				44391F65225E71B000CFBEDE /* Game.swift */,
 				445BEC1222600FCD002F4D33 /* Position.swift */,
+				44544F67226678380099D8AA /* Stats.swift */,
+				44544F692266786A0099D8AA /* StatsSection.swift */,
+				44544F6B2266789A0099D8AA /* Stat.swift */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -189,6 +198,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				44391F60225E716B00CFBEDE /* DfsEntry.swift in Sources */,
+				44544F68226678380099D8AA /* Stats.swift in Sources */,
+				44544F6A2266786A0099D8AA /* StatsSection.swift in Sources */,
 				44544F64226529130099D8AA /* PlayerViewController.swift in Sources */,
 				E61E64B5225FAE1A00C6C0A2 /* PositionTableViewCell.swift in Sources */,
 				E61E64B3225FADE100C6C0A2 /* PositionViewController.swift in Sources */,
@@ -199,6 +210,7 @@
 				44391F5C225E70D100CFBEDE /* ApiManager.swift in Sources */,
 				44391F6A225E736D00CFBEDE /* LineupCache+CoreDataProperties.swift in Sources */,
 				44391F66225E71B000CFBEDE /* Game.swift in Sources */,
+				44544F6C2266789A0099D8AA /* Stat.swift in Sources */,
 				44391F62225E718100CFBEDE /* Player.swift in Sources */,
 				E61E64AF225FAD0700C6C0A2 /* LineupViewController.swift in Sources */,
 				E61E64B1225FAD1600C6C0A2 /* LinupTableViewCell.swift in Sources */,

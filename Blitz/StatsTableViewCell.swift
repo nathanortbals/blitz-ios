@@ -10,6 +10,9 @@ import UIKit
 
 class StatsTableViewCell: UITableViewCell {
 
+    @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var valueLabel: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -20,5 +23,9 @@ class StatsTableViewCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
-
+    
+    func setLabelsFromStat(stat: Stat) {
+        nameLabel.text = stat.getFormattedName()
+        valueLabel.text = stat.value
+    }
 }
