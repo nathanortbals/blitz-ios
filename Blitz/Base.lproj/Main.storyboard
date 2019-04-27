@@ -295,7 +295,11 @@
                         <viewLayoutGuide key="safeArea" id="SR1-Ai-ah0"/>
                     </view>
                     <navigationItem key="navigationItem" title="Name" id="o5y-4E-0Q6">
-                        <barButtonItem key="rightBarButtonItem" title="Choose" id="LuX-Mu-7bo"/>
+                        <barButtonItem key="rightBarButtonItem" title="Choose" id="LuX-Mu-7bo">
+                            <connections>
+                                <action selector="selectPlayerWithSender:" destination="1zj-1D-P6D" id="lj4-vx-ZeM"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="chooseButton" destination="LuX-Mu-7bo" id="vex-rH-qA6"/>

@@ -17,15 +17,20 @@ class PositionViewController: UIViewController, UITableViewDataSource, UITableVi
     var dfsEntries: [DfsEntry] = []
     
     override func viewWillAppear(_ animated: Bool) {
+        view.showBlurLoader()
         if let apiManager = apiManager, let lineupPosition = lineupPosition, let position = Lineup.getPositionFromIndex(index: lineupPosition) {
             self.title = Lineup.getPositionNameFromIndex(index: lineupPosition)
             apiManager.getDfsEntries(position: position){ (result) in
                 switch(result) {
                 case .success(let dfsEntries):
+                    self.view.removeBlurLoader()
                     self.dfsEntries = dfsEntries
                     print(dfsEntries)
                     self.positionTableView.reloadData()
                 case .error(let error):
+                    self.view.removeBlurLoader()
+                    let alert = UIAlertController(title: "Error", message: "Could not fetch data from server.", preferredStyle: .alert)
+                    self.present(alert, animated: true, completion: nil)
                     print(error)
                 }
             }
@@ -62,7 +67,9 @@ class PositionViewController: UIViewController, UITableViewDataSource, UITableVi
         if let destination = segue.destination as? PlayerViewController,
             let row = positionTableView.indexPathForSelectedRow?.row {
             destination.dfsEntry = dfsEntries[row]
+            destination.lineupPosition = lineupPosition
             destination.apiManager = apiManager
+            destination.parentView = self
         }
     }
 }

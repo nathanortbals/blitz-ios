@@ -16,15 +16,20 @@ class LineupViewController: UIViewController, UITableViewDelegate, UITableViewDa
     var lineup: Lineup?
     
     override func viewWillAppear(_ animated: Bool) {
+        view.showBlurLoader()
         apiManager = ApiManager()
         if let apiManager = apiManager {
             apiManager.getLineup(){ (result) in
                 switch(result) {
                 case .success(let lineup):
+                    self.view.removeBlurLoader()
                     self.lineup = lineup
                     print(lineup)
                     self.lineupTableView.reloadData()
                 case .error(let error):
+                    self.view.removeBlurLoader()
+                    let alert = UIAlertController(title: "Error", message: "Could not fetch data from server.", preferredStyle: .alert)
+                    self.present(alert, animated: true, completion: nil)
                     print(error)
                 }
             }
@@ -69,5 +74,4 @@ class LineupViewController: UIViewController, UITableViewDelegate, UITableViewDa
             destination.apiManager = apiManager
         }
     }
-
 }

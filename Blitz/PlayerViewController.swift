@@ -11,8 +11,11 @@ import UIKit
 class PlayerViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
     var dfsEntry: DfsEntry?
+    var lineupPosition: Int?
     var apiManager: ApiManager?
     var stats: Stats?
+    
+    var parentView: PositionViewController?
     
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var positionLabel: UILabel!
@@ -26,16 +29,21 @@ class PlayerViewController: UIViewController, UITableViewDataSource, UITableView
     var currencyFormatter: NumberFormatter = NumberFormatter()
     
     override func viewWillAppear(_ animated: Bool) {
+        view.showBlurLoader()
         setLabelsFromDfsEntry()
         if let apiManager = apiManager, let dfsEntry = dfsEntry {
             apiManager.getStats(dfsEntry: dfsEntry){ (result) in
                 switch(result) {
                 case .success(let stats):
+                    self.view.removeBlurLoader()
                     self.stats = stats
                     print(stats)
                     self.statsTableView.reloadData()
                     self.setGamesPlayedLabel()
                 case .error(let error):
+                    self.view.removeBlurLoader()
+                    let alert = UIAlertController(title: "Error", message: "Could not fetch data from server.", preferredStyle: .alert)
+                    self.present(alert, animated: true, completion: nil)
                     print(error)
                 }
             }
@@ -113,6 +121,29 @@ class PlayerViewController: UIViewController, UITableViewDataSource, UITableView
         }
         else {
             gamesPlayedLabel.text = nil
+        }
+    }
+    
+    @IBAction func selectPlayer(sender: UIBarButtonItem!) {
+        var playerId: String?
+        if dfsEntry?.position == .D {
+            if let id = dfsEntry?.team?.id {
+                playerId = String(id)
+            }
+        }
+        else {
+            if let id = dfsEntry?.player?.id {
+                playerId = String(id)
+            }
+        }
+        
+        do {
+            try apiManager?.setLineupPosition(lineupPosition: lineupPosition, playerId: playerId)
+            self.navigationController?.popViewController(animated: true)
+            parentView?.navigationController?.popViewController(animated: true)
+        }
+        catch {
+            print("Could not save selection")
         }
     }
 }
