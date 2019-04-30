@@ -15,6 +15,7 @@ class LinupTableViewCell: UITableViewCell {
     @IBOutlet weak var teamLabel: UILabel!
     @IBOutlet weak var gameLabel: UILabel!
     @IBOutlet weak var salaryLabel: UILabel!
+    @IBOutlet weak var positionImage: UIImageView!
     
     var currencyFormatter: NumberFormatter = NumberFormatter()
     
@@ -40,6 +41,11 @@ class LinupTableViewCell: UITableViewCell {
         positionLabel.text = Lineup.getPositionNameFromIndex(index: lineupPosition)
         teamLabel.text = dfsEntry.team?.abbreviation
         gameLabel.text = dfsEntry.game?.getGameText()
+        if(positionLabel.text == "Flex"){
+            positionImage.image = UIImage(named: "Flex")
+        }else{
+            positionImage.image = UIImage(named: (dfsEntry.position!.rawValue))
+        }
         
         currencyFormatter.numberStyle = .currency
         if let salary = dfsEntry.salary {
