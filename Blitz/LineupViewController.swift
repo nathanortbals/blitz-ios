@@ -16,15 +16,20 @@ class LineupViewController: UIViewController, UITableViewDelegate, UITableViewDa
     var lineup: Lineup?
     
     override func viewWillAppear(_ animated: Bool) {
+        view.showBlurLoader()
         apiManager = ApiManager()
         if let apiManager = apiManager {
             apiManager.getLineup(){ (result) in
                 switch(result) {
                 case .success(let lineup):
+                    self.view.removeBlurLoader()
                     self.lineup = lineup
                     print(lineup)
                     self.lineupTableView.reloadData()
                 case .error(let error):
+                    self.view.removeBlurLoader()
+                    let alert = UIAlertController(title: "Error", message: "Could not fetch data from server.", preferredStyle: .alert)
+                    self.present(alert, animated: true, completion: nil)
                     print(error)
                 }
             }
@@ -56,7 +61,7 @@ class LineupViewController: UIViewController, UITableViewDelegate, UITableViewDa
         let cell = tableView.dequeueReusableCell(withIdentifier: "lineupTableViewCell", for: indexPath) as! LinupTableViewCell
         
         if let dfsEntry = lineup?.getDfsEntryFromIndex(index: indexPath.row) {
-            cell.setLabelsFromDfsEntry(dfsEntry: dfsEntry)
+            cell.setLabelsFromDfsEntry(lineupPosition: indexPath.row, dfsEntry: dfsEntry)
         }
         
         return cell
@@ -65,9 +70,8 @@ class LineupViewController: UIViewController, UITableViewDelegate, UITableViewDa
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let destination = segue.destination as? PositionViewController,
             let row = lineupTableView.indexPathForSelectedRow?.row {
-            destination.position = lineup?.getDfsEntryFromIndex(index: row)?.position
+            destination.lineupPosition = row
             destination.apiManager = apiManager
         }
     }
-
 }

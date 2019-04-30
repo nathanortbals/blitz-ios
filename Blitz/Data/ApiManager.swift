@@ -67,31 +67,31 @@ class ApiManager {
     func getLineup(completion: @escaping ((Result<Lineup>) -> Void)) {
         var queryItems: [URLQueryItem] = []
         if let qb = lineupCache.qb {
-            queryItems.append(URLQueryItem(name: "qb", value: qb))
+            queryItems.append(URLQueryItem(name: "QB", value: qb))
         }
         if let rb1 = lineupCache.rb1 {
-            queryItems.append(URLQueryItem(name: "rb1", value: rb1))
+            queryItems.append(URLQueryItem(name: "RB1", value: rb1))
         }
         if let rb2 = lineupCache.rb2 {
-            queryItems.append(URLQueryItem(name: "rb2", value: rb2))
+            queryItems.append(URLQueryItem(name: "RB2", value: rb2))
         }
         if let wr1 = lineupCache.wr1 {
-            queryItems.append(URLQueryItem(name: "wr1", value: wr1))
+            queryItems.append(URLQueryItem(name: "WR1", value: wr1))
         }
         if let wr2 = lineupCache.wr2 {
-            queryItems.append(URLQueryItem(name: "wr2", value: wr2))
+            queryItems.append(URLQueryItem(name: "WR2", value: wr2))
         }
         if let wr3 = lineupCache.wr3 {
-            queryItems.append(URLQueryItem(name: "wr3", value: wr3))
+            queryItems.append(URLQueryItem(name: "WR3", value: wr3))
         }
         if let te = lineupCache.te {
-            queryItems.append(URLQueryItem(name: "te", value: te))
+            queryItems.append(URLQueryItem(name: "TE", value: te))
         }
         if let k = lineupCache.f {
-            queryItems.append(URLQueryItem(name: "k", value: k))
+            queryItems.append(URLQueryItem(name: "K", value: k))
         }
         if let d = lineupCache.d {
-            queryItems.append(URLQueryItem(name: "d", value: d))
+            queryItems.append(URLQueryItem(name: "D", value: d))
         }
         
         makeRequest(path: "/lineup", queryItems: queryItems, completion: { (result) in
@@ -126,5 +126,68 @@ class ApiManager {
                 completion(.error(error))
             }
         })
+    }
+    
+    func getStats(dfsEntry: DfsEntry, completion: @escaping ((Result<Stats>) -> Void)) {
+        var path: String?
+        var id: Int?
+        if(dfsEntry.position == .D) {
+            path = "/teamStats"
+            id = dfsEntry.team?.id
+        }
+        else {
+            path = "/playerStats"
+            id = dfsEntry.player?.id
+        }
+        
+        if let path = path, let id = id {
+            var queryItems: [URLQueryItem] = []
+            queryItems.append(URLQueryItem(name: "id", value: String(id)))
+            
+            makeRequest(path: path, queryItems: queryItems, completion: { (result) in
+                switch(result) {
+                case .success(let data):
+                    do {
+                        let stats = try self.decoder.decode(Stats.self, from: data)
+                        completion(.success(stats))
+                    } catch let error {
+                        completion(.error("Could not decode response. Error: " + error.localizedDescription))
+                    }
+                case .error(let error):
+                    completion(.error(error))
+                }
+            })
+        }
+        else {
+            completion(.error("Could not obtain id"))
+        }
+    }
+    
+    func setLineupPosition(lineupPosition: Int?, playerId: String?) throws {
+        switch lineupPosition {
+        case 0:
+            lineupCache.qb = playerId
+        case 1:
+            lineupCache.rb1 = playerId
+        case 2:
+            lineupCache.rb2 = playerId
+        case 3:
+            lineupCache.wr1 = playerId
+        case 4:
+            lineupCache.wr2 = playerId
+        case 5:
+            lineupCache.wr3 = playerId
+        case 6:
+            lineupCache.te = playerId
+        case 7:
+            lineupCache.f = playerId
+        case 8:
+            lineupCache.d = playerId
+        default:
+            break
+        }
+        
+        let managedContext = lineupCache.managedObjectContext
+        try managedContext?.save()
     }
 }

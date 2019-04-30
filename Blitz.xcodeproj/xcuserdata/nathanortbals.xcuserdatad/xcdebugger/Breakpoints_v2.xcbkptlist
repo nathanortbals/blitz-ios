@@ -10,7 +10,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Blitz/Data/ApiManager.swift"
-            timestampString = "577056808.405179"
+            timestampString = "578020306.235809"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "105"
@@ -26,7 +26,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Blitz/Data/ApiManager.swift"
-            timestampString = "577056808.405378"
+            timestampString = "578020306.235866"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "103"
@@ -89,7 +89,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Blitz/Data/ApiManager.swift"
-            timestampString = "577056808.40547"
+            timestampString = "578020306.235907"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "104"
@@ -105,7 +105,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Blitz/Data/ApiManager.swift"
-            timestampString = "577056808.405525"
+            timestampString = "578020306.235944"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "101"
@@ -144,6 +144,70 @@
             endingLineNumber = "72"
             landmarkName = "prepare(for:sender:)"
             landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Blitz/PlayerViewController.swift"
+            timestampString = "578020306.236028"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "118"
+            endingLineNumber = "118"
+            landmarkName = "setGamesPlayedLabel()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Blitz/Data/ApiManager.swift"
+            timestampString = "578020306.2363729"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "50"
+            endingLineNumber = "50"
+            landmarkName = "makeRequest(path:queryItems:completion:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Blitz.ApiManager.(makeRequest in _C307B8FEAEA3044F73D54E3C5E0B48EE)(path: Swift.String, queryItems: Swift.Optional&lt;Swift.Array&lt;Foundation.URLQueryItem&gt;&gt;, completion: (Blitz.Result&lt;Foundation.Data&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "Blitz"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/nathanortbals/Documents/blitz-ios/Blitz/Data/ApiManager.swift"
+                  timestampString = "578019141.00809"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "50"
+                  endingLineNumber = "50"
+                  offsetFromSymbolStart = "663">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Optional&lt;Foundation.Data&gt;, Swift.Optional&lt;__C.NSURLResponse&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in Blitz.ApiManager.(makeRequest in _C307B8FEAEA3044F73D54E3C5E0B48EE)(path: Swift.String, queryItems: Swift.Optional&lt;Swift.Array&lt;Foundation.URLQueryItem&gt;&gt;, completion: (Blitz.Result&lt;Foundation.Data&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "Blitz"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/nathanortbals/Documents/blitz-ios/Blitz/Data/ApiManager.swift"
+                  timestampString = "578019141.010867"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "51"
+                  endingLineNumber = "51"
+                  offsetFromSymbolStart = "67">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

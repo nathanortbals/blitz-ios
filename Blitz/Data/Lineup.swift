@@ -45,4 +45,54 @@ struct Lineup: Codable {
             return nil
         }
     }
+    
+    static func getPositionNameFromIndex(index: Int) -> String? {
+        switch(index) {
+        case 0:
+            return "Quarterback"
+        case 1:
+            return "Running Back 1"
+        case 2:
+            return "Running Back 2"
+        case 3:
+            return "Wide Receiver 1"
+        case 4:
+            return "Wide Receiver 2"
+        case 5:
+            return "Wide Receiver 3"
+        case 6:
+            return "Tight End"
+        case 7:
+            return "Flex"
+        case 8:
+            return "Defense"
+        default:
+            return nil
+        }
+    }
+    
+    static func getPositionFromIndex(index: Int) -> Position? {
+        switch(index) {
+        case 0:
+            return .QB
+        case 1:
+            return .RB
+        case 2:
+            return .RB
+        case 3:
+            return .WR
+        case 4:
+            return .WR
+        case 5:
+            return .WR
+        case 6:
+            return .TE
+        case 7:
+            return .F
+        case 8:
+            return .D
+        default:
+            return nil
+        }
+    }
 }
