@@ -27,9 +27,9 @@
 		E61E64B1225FAD1600C6C0A2 /* LinupTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E61E64B0225FAD1600C6C0A2 /* LinupTableViewCell.swift */; };
 		E61E64B3225FADE100C6C0A2 /* PositionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E61E64B2225FADE100C6C0A2 /* PositionViewController.swift */; };
 		E61E64B5225FAE1A00C6C0A2 /* PositionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E61E64B4225FAE1A00C6C0A2 /* PositionTableViewCell.swift */; };
-		E6F929182270C402002EFFE2 /* BlitzWR.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E6F929132270C402002EFFE2 /* BlitzWR.jpg */; };
+		E6F929182270C402002EFFE2 /* BlitzWR.png in Resources */ = {isa = PBXBuildFile; fileRef = E6F929132270C402002EFFE2 /* BlitzWR.png */; };
 		E6F929192270C402002EFFE2 /* BlitzQB.png in Resources */ = {isa = PBXBuildFile; fileRef = E6F929142270C402002EFFE2 /* BlitzQB.png */; };
-		E6F9291A2270C402002EFFE2 /* BlitzRB.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E6F929152270C402002EFFE2 /* BlitzRB.jpg */; };
+		E6F9291A2270C402002EFFE2 /* BlitzRB.png in Resources */ = {isa = PBXBuildFile; fileRef = E6F929152270C402002EFFE2 /* BlitzRB.png */; };
 		E6F9291B2270C402002EFFE2 /* BlitzFlex.png in Resources */ = {isa = PBXBuildFile; fileRef = E6F929162270C402002EFFE2 /* BlitzFlex.png */; };
 		E6F9291C2270C402002EFFE2 /* BlitzTE.png in Resources */ = {isa = PBXBuildFile; fileRef = E6F929172270C402002EFFE2 /* BlitzTE.png */; };
 /* End PBXBuildFile section */
@@ -57,9 +57,9 @@
 		E61E64B0225FAD1600C6C0A2 /* LinupTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LinupTableViewCell.swift; sourceTree = "<group>"; };
 		E61E64B2225FADE100C6C0A2 /* PositionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PositionViewController.swift; sourceTree = "<group>"; };
 		E61E64B4225FAE1A00C6C0A2 /* PositionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PositionTableViewCell.swift; sourceTree = "<group>"; };
-		E6F929132270C402002EFFE2 /* BlitzWR.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = BlitzWR.jpg; sourceTree = "<group>"; };
+		E6F929132270C402002EFFE2 /* BlitzWR.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = BlitzWR.png; sourceTree = "<group>"; };
 		E6F929142270C402002EFFE2 /* BlitzQB.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = BlitzQB.png; sourceTree = "<group>"; };
-		E6F929152270C402002EFFE2 /* BlitzRB.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = BlitzRB.jpg; sourceTree = "<group>"; };
+		E6F929152270C402002EFFE2 /* BlitzRB.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = BlitzRB.png; sourceTree = "<group>"; };
 		E6F929162270C402002EFFE2 /* BlitzFlex.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = BlitzFlex.png; sourceTree = "<group>"; };
 		E6F929172270C402002EFFE2 /* BlitzTE.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = BlitzTE.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -131,9 +131,9 @@
 		E6F929122270C402002EFFE2 /* Blitz Player Images */ = {
 			isa = PBXGroup;
 			children = (
-				E6F929132270C402002EFFE2 /* BlitzWR.jpg */,
+				E6F929132270C402002EFFE2 /* BlitzWR.png */,
 				E6F929142270C402002EFFE2 /* BlitzQB.png */,
-				E6F929152270C402002EFFE2 /* BlitzRB.jpg */,
+				E6F929152270C402002EFFE2 /* BlitzRB.png */,
 				E6F929162270C402002EFFE2 /* BlitzFlex.png */,
 				E6F929172270C402002EFFE2 /* BlitzTE.png */,
 			);
@@ -199,8 +199,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E6F929182270C402002EFFE2 /* BlitzWR.jpg in Resources */,
-				E6F9291A2270C402002EFFE2 /* BlitzRB.jpg in Resources */,
+				E6F929182270C402002EFFE2 /* BlitzWR.png in Resources */,
+				E6F9291A2270C402002EFFE2 /* BlitzRB.png in Resources */,
 				E6F9291B2270C402002EFFE2 /* BlitzFlex.png in Resources */,
 				44391F4F225E6B0200CFBEDE /* LaunchScreen.storyboard in Resources */,
 				E6F9291C2270C402002EFFE2 /* BlitzTE.png in Resources */,
