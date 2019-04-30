@@ -180,6 +180,7 @@
                                         <connections>
                                             <outlet property="gameLabel" destination="0dm-Xd-bCd" id="oMW-x9-Hb1"/>
                                             <outlet property="nameLabel" destination="2qS-1c-NB1" id="ADZ-pP-UXm"/>
+                                            <outlet property="positionImage" destination="Bue-R4-bPn" id="Ml0-26-nn1"/>
                                             <outlet property="salaryLabel" destination="fvY-NB-uzh" id="SSl-70-FV9"/>
                                             <outlet property="teamLabel" destination="9y0-Do-oGK" id="7PW-dp-HDN"/>
                                             <segue destination="1zj-1D-P6D" kind="show" id="x3o-gV-sAZ"/>
@@ -282,6 +283,7 @@
                         <outlet property="chooseButton" destination="LuX-Mu-7bo" id="vex-rH-qA6"/>
                         <outlet property="gameLabel" destination="RoX-cY-ma6" id="KkW-8c-o6S"/>
                         <outlet property="imageView" destination="o6Q-dg-iAW" id="QaN-8F-h2Q"/>
+                        <outlet property="positionImage" destination="o6Q-dg-iAW" id="n66-Xu-WHa"/>
                         <outlet property="salaryLabel" destination="gge-zN-dzZ" id="C9K-gr-NlF"/>
                         <outlet property="statsTableView" destination="5wc-67-lEU" id="cNR-hT-2I1"/>
                     </connections>

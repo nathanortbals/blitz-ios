@@ -15,7 +15,7 @@ class PlayerViewController: UIViewController, UITableViewDataSource, UITableView
     
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var positionLabel: UILabel!
-    @IBOutlet weak var imageView: UIImageView!
+    @IBOutlet weak var positionImage: UIImageView!
     @IBOutlet weak var salaryLabel: UILabel!
     @IBOutlet weak var gameLabel: UILabel!
     @IBOutlet weak var statsTableView: UITableView!
@@ -69,6 +69,7 @@ class PlayerViewController: UIViewController, UITableViewDataSource, UITableView
         }
         
         gameLabel.text = dfsEntry?.game?.getGameText()
+        //positionImage.image = UIImage(named: dfsEntry?.position?.getPositionName() ?? "")
         
         currencyFormatter.numberStyle = .currency
         if let salary = dfsEntry?.salary {

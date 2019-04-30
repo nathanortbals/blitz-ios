@@ -13,6 +13,7 @@ class PositionTableViewCell: UITableViewCell {
     @IBOutlet weak var teamLabel: UILabel!
     @IBOutlet weak var gameLabel: UILabel!
     @IBOutlet weak var salaryLabel: UILabel!
+    @IBOutlet weak var positionImage: UIImageView!
     
     var currencyFormatter: NumberFormatter = NumberFormatter()
     
@@ -34,6 +35,7 @@ class PositionTableViewCell: UITableViewCell {
         
         teamLabel.text = dfsEntry.team?.abbreviation
         gameLabel.text = dfsEntry.game?.getGameText()
+        positionImage.image = UIImage(named: dfsEntry.position?.getPositionName() ?? "")
         
         currencyFormatter.numberStyle = .currency
         if let salary = dfsEntry.salary {
