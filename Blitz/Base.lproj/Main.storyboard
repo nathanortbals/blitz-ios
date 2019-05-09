@@ -67,6 +67,7 @@
                                                 </label>
                                             </subviews>
                                             <constraints>
+                                                <constraint firstAttribute="bottom" secondItem="K1T-a9-gtA" secondAttribute="bottom" constant="107" id="2Ew-Wn-OxI"/>
                                                 <constraint firstItem="DKL-5F-IjG" firstAttribute="leading" secondItem="pMI-wq-Q3X" secondAttribute="trailing" constant="10" id="Cuu-ey-c9E"/>
                                                 <constraint firstItem="K1T-a9-gtA" firstAttribute="top" secondItem="d0q-kG-dKz" secondAttribute="top" constant="10" id="Dyp-ww-90v"/>
                                                 <constraint firstItem="U3C-Ug-INh" firstAttribute="bottom" secondItem="pMI-wq-Q3X" secondAttribute="bottom" id="HqN-qC-YYO"/>
@@ -180,6 +181,7 @@
                                         <connections>
                                             <outlet property="gameLabel" destination="0dm-Xd-bCd" id="oMW-x9-Hb1"/>
                                             <outlet property="nameLabel" destination="2qS-1c-NB1" id="ADZ-pP-UXm"/>
+                                            <outlet property="positionImage" destination="Bue-R4-bPn" id="nnA-Z6-qRM"/>
                                             <outlet property="salaryLabel" destination="fvY-NB-uzh" id="SSl-70-FV9"/>
                                             <outlet property="teamLabel" destination="9y0-Do-oGK" id="7PW-dp-HDN"/>
                                             <segue destination="1zj-1D-P6D" kind="show" id="x3o-gV-sAZ"/>
