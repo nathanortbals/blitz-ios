@@ -88,7 +88,7 @@ class ApiManager {
             queryItems.append(URLQueryItem(name: "TE", value: te))
         }
         if let k = lineupCache.f {
-            queryItems.append(URLQueryItem(name: "K", value: k))
+            queryItems.append(URLQueryItem(name: "F", value: k))
         }
         if let d = lineupCache.d {
             queryItems.append(URLQueryItem(name: "D", value: d))
